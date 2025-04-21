@@ -2,8 +2,9 @@ import asyncio
 import requests
 from bs4 import BeautifulSoup
 import discord
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
+
 
 load_dotenv()
 
