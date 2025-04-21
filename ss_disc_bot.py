@@ -99,5 +99,13 @@ async def on_message(message):
         )
         await message.channel.send(help_text)
 
-client.loop.create_task(check_ads_loop())
+@client.event
+async def on_ready():
+    print(f'✅ Бот {client.user} запущен!')
+    load_categories()
+
+@client.event
+async def setup_hook():
+    client.loop.create_task(check_ads_loop())
+
 client.run(TOKEN)
