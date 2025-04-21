@@ -2,11 +2,13 @@ import asyncio
 import requests
 from bs4 import BeautifulSoup
 import discord
+from dotenv import load_dotenv
 import os
-# e39ee046af3cf53d9ad50aec84412157b1e372fda894db2055781e83ffe7290d  https://discord.com/api/webhooks/1363855070151573574/Sm94GfUkIEarztz9DfQ9mKTp0YiwFZV7vCRc3kl-GRUx8G6FeA9BCxEpp19PJ3fWgS7h
 
-TOKEN = os.getenv("TOKEN")
-CHANNEL_ID = '1363182020314005522' # замени на свой ID канала 1363182020314005522
+load_dotenv()
+
+TOKEN = os.getenv('TOKEN')
+CHANNEL_ID = os.getenv('CHANNEL_ID')
 
 CATEGORIES_FILE = 'categories.txt'
 
